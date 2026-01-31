@@ -1,9 +1,29 @@
 {
-  "name": "schemaforge",
+  "name": "@kieferwaight/schemaforge",
   "version": "1.0.0",
-  "description": "JSON schema repository with TypeScript type generation",
-  "private": true,
+  "description": "JSON Schema workspace with TypeScript type generation",
+  "private": false,
   "type": "module",
+  "keywords": [
+    "json-schema",
+    "typescript",
+    "schema",
+    "type-generation",
+    "validation"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT AND CC0-1.0",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kieferwaight/schemaforge"
+  },
+  "homepage": "https://github.com/kieferwaight/schemaforge#readme",
+  "bugs": {
+    "url": "https://github.com/kieferwaight/schemaforge/issues"
+  },
   "scripts": {
     "setup": "pnpm install",
     "setup:hooks": "scripts/setup/hooks.js",
