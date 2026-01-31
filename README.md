@@ -67,6 +67,26 @@ Users can use this directly for integrations.
 
 ---
 
+## Who is this for?
+
+schemaforge is designed for:
+- Tool authors who need stable JSON Schemas
+- Teams validating configuration files in CI
+- Editor integrations (VS Code, JetBrains, etc.)
+- Infrastructure and platform engineers
+- Open-source projects needing schema versioning
+
+
+## Common Use Cases
+
+- JSON Schema validation in CI pipelines
+- Type-safe configuration with TypeScript
+- Editor auto-completion via JSON Schema
+- Maintaining backwards-compatible schemas
+- Schema distribution without external URLs
+
+---
+
 ## For Contributors
 
 ### Quick Start
