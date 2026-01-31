@@ -8,7 +8,8 @@
 ![Issues](https://img.shields.io/github/issues/kieferwaight/schemaforge)
 ![License](https://img.shields.io/badge/license-CC0%2FMIT-lightgrey)
 
-A curated collection of versioned schemas for developers, with strong guarantees around stability, extensibility, and contributor freedom.
+schemaforge is a versioned JSON Schema registry and tooling platform for developers.
+It provides stable, namespaced schemas with automatic TypeScript type generation, editor integration, and CI-friendly validation workflows.
 
 ## About
 
@@ -64,6 +65,26 @@ Explore the available namespaces:
 Each namespace includes full schema files, usage instructions, and documentation for integration.
 
 Users can use this directly for integrations.
+
+---
+
+## Who is this for?
+
+schemaforge is designed for:
+- Tool authors who need stable JSON Schemas
+- Teams validating configuration files in CI
+- Editor integrations (VS Code, JetBrains, etc.)
+- Infrastructure and platform engineers
+- Open-source projects needing schema versioning
+
+
+## Common Use Cases
+
+- JSON Schema validation in CI pipelines
+- Type-safe configuration with TypeScript
+- Editor auto-completion via JSON Schema
+- Maintaining backwards-compatible schemas
+- Schema distribution without external URLs
 
 ---
 
