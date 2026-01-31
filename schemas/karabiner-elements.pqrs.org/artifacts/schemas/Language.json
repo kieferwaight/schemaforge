@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Language.json",
+  "title": "Language",
+  "description": "The language as a regex pattern (e.g., '^en$', '^ja$', '^en_.*$') or a literal language code (e.g., 'en', 'ja', 'en_US').",
+  "type": "string",
+  "minLength": 1
+}

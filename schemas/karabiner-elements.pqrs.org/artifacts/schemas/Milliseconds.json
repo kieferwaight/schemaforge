@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Milliseconds.json",
+  "title": "Milliseconds",
+  "description": "A non-negative integer representing a duration in milliseconds",
+  "type": "integer",
+  "minimum": 0,
+  "default": 500
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "KeyCodes.json",
+  "title": "Key Code",
+  "description": "Represents any key code as accepted by Karabiner-Elements, including generic keys and modifier keys.",
+  "anyOf": [
+    {
+      "$ref": "ConsumerKeyCodes.json"
+    },
+    {
+      "$ref": "PointingButton.json"
+    },
+    {
+      "$ref": "FromKeyCodes.json"
+    },
+    {
+      "$ref": "ToKeyCodes.json"
+    },
+    {
+      "$ref": "FromOnlyKeyCodes.json"
+    },
+    {
+      "$ref": "ToOnlyKeyCodes.json"
+    },
+    {
+      "$ref": "ModifierKeyCodes.json"
+    },
+    {
+      "$ref": "FromOnlyConsumerKeyCodes.json"
+    },
+    {
+      "$ref": "ToConsumerKeyCodes.json"
+    },
+    {
+      "$ref": "AnyKeyCode.json"
+    }
+  ]
+}

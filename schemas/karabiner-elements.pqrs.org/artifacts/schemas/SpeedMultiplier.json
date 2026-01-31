@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "SpeedMultiplier.json",
+  "title": "Speed Multiplier",
+  "description": "Multiply mouse speed.",
+  "type": "number",
+  "minimum": 0.1,
+  "maximum": 10
+}

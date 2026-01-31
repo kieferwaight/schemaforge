@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "InternationalKeyCodes.json",
+  "title": "International Key Codes",
+  "description": "International key codes.",
+  "type": "string",
+  "enum": [
+    "international1",
+    "international3",
+    "lang1",
+    "lang2"
+  ]
+}

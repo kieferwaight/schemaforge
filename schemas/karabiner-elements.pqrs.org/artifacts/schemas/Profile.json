@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Profile.json",
+  "title": "Profile",
+  "description": "A profile in Karabiner-Elements.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "selected": {
+      "type": "boolean"
+    },
+    "simple_modifications": {
+      "$ref": "SimpleModifications.json"
+    },
+    "fn_function_keys": {
+      "$ref": "FnFunctionKeys.json"
+    },
+    "complex_modifications": {
+      "$ref": "ComplexModifications.json"
+    },
+    "virtual_hid_keyboard": {
+      "$ref": "VirtualHIDKeyboard.json"
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "$ref": "DeviceIdentifier.json"
+      }
+    },
+    "parameters": {
+      "$ref": "Parameters.json"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name"
+  ]
+}

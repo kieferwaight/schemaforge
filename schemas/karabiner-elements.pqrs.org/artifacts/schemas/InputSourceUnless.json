@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "InputSourceUnless.json",
+  "title": "Input Source Unless",
+  "description": "Defines a condition that checks if the input source does not match a specific value.",
+  "type": "object",
+  "required": [
+    "type",
+    "input_sources"
+  ],
+  "properties": {
+    "type": {
+      "const": "input_source_unless"
+    },
+    "input_sources": {
+      "type": "array",
+      "items": {
+        "$ref": "InputSource.json"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

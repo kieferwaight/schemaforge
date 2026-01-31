@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ArrowKeyCodes.json",
+  "title": "Arrow Key Codes",
+  "description": "Arrow key codes.",
+  "type": "string",
+  "enum": [
+    "up_arrow",
+    "down_arrow",
+    "left_arrow",
+    "right_arrow",
+    "page_up",
+    "page_down",
+    "home",
+    "end"
+  ]
+}

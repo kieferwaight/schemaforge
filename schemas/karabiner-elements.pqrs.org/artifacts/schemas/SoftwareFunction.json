@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "SoftwareFunction.json",
+  "title": "Software Function",
+  "description": "Software function to be executed.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "set_mouse_cursor_position": {
+      "$ref": "SetMouseCursorPosition.json"
+    },
+    "open_application": {
+      "$ref": "OpenApplication.json"
+    },
+    "iokit_power_management_sleep_system": {
+      "$ref": "PutSystemToSleep.json"
+    },
+    "cg_event_double_click": {
+      "$ref": "DoubleClick.json"
+    }
+  }
+}

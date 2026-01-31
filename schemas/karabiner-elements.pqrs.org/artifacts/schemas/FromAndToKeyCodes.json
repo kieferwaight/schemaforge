@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "FromAndToKeyCodes.json",
+  "title": "From and To Key Codes",
+  "description": "Key codes that can be used both from and to.",
+  "type": "string",
+  "anyOf": [
+    {
+      "$ref": "ModifierKeyCodes.json"
+    },
+    {
+      "$ref": "ControlOrSymbolKeyCodes.json"
+    },
+    {
+      "$ref": "ArrowKeyCodes.json"
+    },
+    {
+      "$ref": "LetterKeyCodes.json"
+    },
+    {
+      "$ref": "NumberKeyCodes.json"
+    },
+    {
+      "$ref": "FunctionKeyCodes.json"
+    },
+    {
+      "$ref": "KeypadKeyCodes.json"
+    },
+    {
+      "$ref": "PcKeyboardCodes.json"
+    },
+    {
+      "$ref": "InternationalKeyCodes.json"
+    },
+    {
+      "$ref": "OtherKeyCodes.json"
+    },
+    {
+      "$ref": "AnyKeyCode.json"
+    },
+    {
+      "$ref": "AppleVendorKeyCodes.json"
+    }
+  ]
+}

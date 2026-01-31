@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ScreenPosition.json",
+  "title": "Screen Position",
+  "description": "Position on the screen for setting the mouse cursor position.",
+  "type": "object",
+  "oneOf": [
+    {
+      "$ref": "PixelCoordinates.json"
+    },
+    {
+      "$ref": "PercentageCoordinates.json"
+    }
+  ]
+}

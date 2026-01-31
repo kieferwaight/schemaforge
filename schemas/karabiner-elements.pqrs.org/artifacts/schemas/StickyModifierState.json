@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "StickyModifierState.json",
+  "title": "Sticky Modifier State",
+  "description": "Sticky modifier state settings.",
+  "type": "string",
+  "enum": [
+    "on",
+    "off",
+    "toggle"
+  ]
+}

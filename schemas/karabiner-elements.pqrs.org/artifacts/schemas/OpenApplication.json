@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "OpenApplication.json",
+  "title": "Open Application",
+  "description": "Open an application by path, bundle identifier, or application history. See: https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to/software_function/open_application/",
+  "type": "object",
+  "properties": {
+    "frontmost_application": {
+      "title": "Frontmost Application",
+      "description": "Open the frontmost application in the history by index.",
+      "$ref": "FrontMostApplicationHistoryIndex.json"
+    },
+    "bundle_identifier": {
+      "title": "Application Bundle Identifier",
+      "description": "Open an application by its bundle identifier.",
+      "$ref": "BundleIdentifier.json"
+    },
+    "file_path": {
+      "title": "Application Path",
+      "description": "Open an application by its file path.",
+      "$ref": "FilePath.json"
+    }
+  }
+}

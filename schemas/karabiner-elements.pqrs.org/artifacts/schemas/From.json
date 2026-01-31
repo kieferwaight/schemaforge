@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "From.json",
+  "title": "From",
+  "description": "Defines the input conditions that trigger a manipulation",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "key_code": {
+      "$ref": "FromKeyCodes.json"
+    },
+    "pointing_button": {
+      "$ref": "PointingButton.json"
+    },
+    "consumer_key_code": {
+      "$ref": "ConsumerKeyCodes.json"
+    },
+    "modifiers": {
+      "title": "Modifiers",
+      "description": "Mandatory and optional list of modifier keys used for matching.",
+      "type": "object",
+      "properties": {
+        "mandatory": {
+          "title": "Mandatory",
+          "description": "A mandatory list of key code.",
+          "type": "array",
+          "items": {
+            "$ref": "ModifierKeyCodes.json"
+          }
+        },
+        "optional": {
+          "title": "Optional",
+          "description": "An optional list of key codes.",
+          "type": "array",
+          "items": {
+            "$ref": "ModifierKeyCodes.json"
+          }
+        }
+      }
+    },
+    "simultaneous": {
+      "type": "array",
+      "items": {
+        "$ref": "SimultaneousEvent.json"
+      }
+    },
+    "simultaneous_options": {
+      "type": "object",
+      "properties": {
+        "detect_key_down_uninterruptedly": {
+          "title": "Detect Key Down Uninterruptedly",
+          "description": "Specify whether key_down detection is interrupted with unrelated events.",
+          "type": "boolean"
+        },
+        "key_down_order": {
+          "title": "Key Down Order",
+          "description": "Restriction of key_down order.",
+          "$ref": "KeyEventOrder.json"
+        },
+        "key_up_order": {
+          "title": "Key Up Order",
+          "description": "Restriction of key_up order.",
+          "$ref": "KeyEventOrder.json"
+        },
+        "key_up_when": {
+          "title": "Key Up When",
+          "description": "When key_up events are posted.",
+          "$ref": "KeyUpWhen.json"
+        },
+        "to_after_key_up": {
+          "title": "To After Key Up",
+          "description": "To after key up will be posted when all from events are released. This feature is typically used to clear mode flag variables when all from events are released.",
+          "type": "array",
+          "items": {
+            "$ref": "To.json"
+          }
+        }
+      }
+    },
+    "any": {
+      "$ref": "EventTypes.json"
+    },
+    "options": {
+      "title": "Options",
+      "description": "Options for mouse motion to scroll.",
+      "type": "object",
+      "$ref": "MouseScrollOptions.json"
+    }
+  }
+}

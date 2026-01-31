@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "To.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "apple_vendor_keyboard_code": {
+      "$ref": "AppleVendorKeyCodes.json"
+    },
+    "key_code": {
+      "$ref": "ToKeyCodes.json"
+    },
+    "repeat": {
+      "title": "Repeat",
+      "description": "If true, the key will be repeated.",
+      "type": "boolean",
+      "default": false
+    },
+    "halt": {
+      "title": "Halt",
+      "description": "If true, the event will be halted.",
+      "type": "boolean",
+      "default": false
+    },
+    "shell_command": {
+      "title": "Shell Command",
+      "description": "The very limited environment variables are passed to the command, $HOME, $UID, $USER, etc. Export environment variables in shell_command if your commands depend them. For example, the following command does not work well with unicode characters because tr command depends the current locale.",
+      "type": "string"
+    },
+    "mouse_key": {
+      "$ref": "MouseKey.json"
+    },
+    "set_variable": {
+      "$ref": "SetVariable.json"
+    },
+    "set_notification_message": {
+      "$ref": "SetNotificationMessage.json"
+    },
+    "modifiers": {
+      "title": "Modifiers",
+      "description": "A list of modifier keys to be pressed.",
+      "type": "array",
+      "items": {
+        "$ref": "ModifierKeyCodes.json"
+      }
+    },
+    "pointing_button": {
+      "$ref": "PointingButton.json"
+    },
+    "hold_down_milliseconds": {
+      "title": "Hold Down Milliseconds",
+      "description": "Hold down time in milliseconds.",
+      "type": "integer"
+    },
+    "select_input_source": {
+      "$ref": "InputSource.json"
+    },
+    "lazy": {
+      "title": "Lazy",
+      "description": "If true, the event will be sent lazily. The lazy modifier is designed using with to_if_alone or key combinations such as changing left_control + h to delete_or_backspace in order to suppress unnecessary modifier key events.",
+      "type": "boolean"
+    },
+    "software_function": {
+      "$ref": "SoftwareFunction.json"
+    },
+    "sticky_modifiers": {
+      "title": "Sticky Modifiers",
+      "description": "Sticky modifiers are used to keep the modifier keys pressed even after they are released.",
+      "$ref": "StickyModifier.json"
+    },
+    "conditions": {
+      "title": "Conditions",
+      "description": "Conditions are evaluated when the first event in the sequence of events within to is processed. This means that even if a variable’s value changes (e.g., using set_variable within to), the updated value won’t be immediately evaluated.",
+      "type": "array",
+      "items": {
+        "$ref": "Condition.json"
+      }
+    }
+  },
+  "title": "To"
+}

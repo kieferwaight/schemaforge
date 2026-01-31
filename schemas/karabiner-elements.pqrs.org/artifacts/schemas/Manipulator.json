@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Manipulator.json",
+  "title": "Manipulator",
+  "description": "This is where the core logic of the rule is defined.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "ManipulatorType.json"
+    },
+    "description": {
+      "title": "Description",
+      "description": "Optional description for human",
+      "type": "string"
+    },
+    "from": {
+      "title": "From",
+      "description": "Defines the input conditions that trigger a manipulation.",
+      "$ref": "From.json"
+    },
+    "to": {
+      "title": "To",
+      "description": "Defines the action to take when the input conditions are met.",
+      "type": "array",
+      "items": {
+        "$ref": "To.json"
+      }
+    },
+    "to_if_alone": {
+      "title": "To If Alone",
+      "description": "Defines the action to take if the key is pressed alone.",
+      "type": "array",
+      "items": {
+        "$ref": "To.json"
+      }
+    },
+    "to_after_key_up": {
+      "title": "To After Key Up",
+      "description": "Defines the action to take after the key is released.",
+      "type": "array",
+      "items": {
+        "$ref": "To.json"
+      }
+    },
+    "to_if_held_down": {
+      "title": "To If Held Down",
+      "description": "Defines the action to take if the key is held down.",
+      "type": "array",
+      "items": {
+        "$ref": "To.json"
+      }
+    },
+    "to_delayed_action": {
+      "title": "To Delayed Action",
+      "description": "Events which are sent after 500 milliseconds at you press from key",
+      "type": "object",
+      "properties": {
+        "to_if_invoked": {
+          "title": "To If Invoked",
+          "description": "Defines the action to take if the key is invoked.",
+          "type": "array",
+          "items": {
+            "$ref": "To.json"
+          }
+        },
+        "to_if_canceled": {
+          "title": "To If Canceled",
+          "description": "Defines the action to take if the key is canceled.",
+          "type": "array",
+          "items": {
+            "$ref": "To.json"
+          }
+        }
+      }
+    },
+    "parameters": {
+      "title": "Parameters",
+      "description": "Override parameters such as to_if_alone_timeout_milliseconds",
+      "$ref": "Parameters.json"
+    },
+    "conditions": {
+      "title": "Conditions",
+      "description": "Defines the conditions that must be met for the rule to apply.",
+      "type": "array",
+      "items": {
+        "$ref": "Condition.json"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "from"
+  ]
+}

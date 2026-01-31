@@ -1,0 +1,42 @@
+name: Validate Schemas
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "schemas/**/*.json"
+      - "scripts/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/build-schemas.yml"
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-schemas:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build schemas
+        run: pnpm run build
+
+      - name: Test schemas
+        run: pnpm run test

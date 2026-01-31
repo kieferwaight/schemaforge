@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "FromKeyCodes.json",
+  "title": "From Key Codes",
+  "description": "Key codes that can be used only from.",
+  "type": "string",
+  "anyOf": [
+    {
+      "$ref": "FromAndToKeyCodes.json"
+    },
+    {
+      "$ref": "FromOnlyKeyCodes.json"
+    }
+  ]
+}

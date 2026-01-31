@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ComplexModification.json",
+  "title": "Complex Modification",
+  "description": "Karabiner-Elements complex modification file (assets/complex_modifications).",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "$ref": "Schema.json"
+    },
+    "title": {
+      "title": "Title",
+      "description": "Title for the complex modification.",
+      "type": "string"
+    },
+    "manipulators": {
+      "title": "Manipulators",
+      "description": "A list of manipulators that define the complex modification.",
+      "type": "array",
+      "items": {
+        "$ref": "Manipulator.json"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "manipulators"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ScreenIndex.json",
+  "title": "Screen Index",
+  "description": "A non-negative integer representing the index of the screen (0 = main screen, 1 = second screen, etc.)",
+  "$ref": "Index.json"
+}

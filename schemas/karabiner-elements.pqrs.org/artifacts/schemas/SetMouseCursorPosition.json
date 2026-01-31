@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "SetMouseCursorPosition.json",
+  "title": "Set Mouse Cursor Position",
+  "description": "Set the mouse cursor position on the screen. See: https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to/software_function/set_mouse_cursor_position/",
+  "$ref": "ScreenPosition.json"
+}

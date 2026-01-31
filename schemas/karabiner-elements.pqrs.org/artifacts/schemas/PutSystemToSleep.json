@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "PutSystemToSleep.json",
+  "title": "Put System to Sleep",
+  "description": "Put the system to sleep. See: https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to/software_function/iokit_power_management_sleep_system/",
+  "type": "object",
+  "properties": {
+    "delay_milliseconds": {
+      "title": "Delay In Milliseconds",
+      "description": "Waiting time before the system goes to sleep (500 ms if unspecified)",
+      "$ref": "Milliseconds.json"
+    }
+  }
+}

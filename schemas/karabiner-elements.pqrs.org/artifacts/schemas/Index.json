@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Index.json",
+  "title": "Index",
+  "description": "A non-negative integer representing an index",
+  "type": "integer",
+  "minimum": 0
+}

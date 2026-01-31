@@ -1,0 +1,9 @@
+{
+  "$schema": "../namespace/schema.json",
+  "name": "npm.package",
+  "description": "npm package.json schema",
+  "version": "1.0.0",
+  "sync": {
+    "schema.json": "https://www.schemastore.org/package.json"
+  }
+}

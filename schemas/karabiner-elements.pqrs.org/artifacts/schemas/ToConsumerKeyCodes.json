@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ToConsumerKeyCodes.json",
+  "title": "To Consumer Key Codes",
+  "description": "Consumer key codes that can be used only to.",
+  "type": "string",
+  "enum": [
+    "display_brightness_decrement",
+    "display_brightness_increment",
+    "dictation"
+  ]
+}

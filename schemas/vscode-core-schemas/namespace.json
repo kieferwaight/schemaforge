@@ -1,0 +1,32 @@
+{
+  "$schema": "../namespace/schema.json",
+  "name": "vscode-core-schemas",
+  "description": "VS Code core configuration schemas",
+  "version": "1.0.0",
+  "sync": {
+    "schemas/settings/default.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/settings/default.json",
+    "schemas/settings/folder.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/settings/folder.json",
+    "schemas/settings/machine.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/settings/machine.json",
+    "schemas/settings/resourceLanguage.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/settings/resourceLanguage.json",
+    "schemas/settings/user.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/settings/user.json",
+    "schemas/settings/workspace.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/settings/workspace.json",
+    "schemas/argv.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/argv.json",
+    "schemas/color-theme.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/color-theme.json",
+    "schemas/extensions.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/extensions.json",
+    "schemas/global-snippets.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/global-snippets.json",
+    "schemas/icon-theme.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/icon-theme.json",
+    "schemas/icons.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/icons.json",
+    "schemas/ignoredSettings.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/ignoredSettings.json",
+    "schemas/keybindings.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/keybindings.json",
+    "schemas/language-configuration.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/language-configuration.json",
+    "schemas/launch.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/launch.json",
+    "schemas/product-icon-theme.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/product-icon-theme.json",
+    "schemas/snippets.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/snippets.json",
+    "schemas/tasks.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/tasks.json",
+    "schemas/textmate-colors.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/textmate-colors.json",
+    "schemas/token-styling.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/token-styling.json",
+    "schemas/vscode-extensions.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/vscode-extensions.json",
+    "schemas/workbench-colors.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/workbench-colors.json",
+    "schemas/workspaceConfig.json": "https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/workspaceConfig.json"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "PixelCoordinates.json",
+  "title": "Pixel Coordinates",
+  "description": "Absolute x,y coordinate measured in pixels for positioning on the screen.",
+  "type": "object",
+  "properties": {
+    "x": {
+      "$ref": "PixelValue.json",
+      "description": "Horizontal (X-axis) pixel coordinate"
+    },
+    "y": {
+      "$ref": "PixelValue.json",
+      "description": "Vertical (Y-axis) pixel coordinate"
+    },
+    "screen": {
+      "$ref": "Index.json"
+    }
+  },
+  "required": [
+    "x",
+    "y"
+  ]
+}

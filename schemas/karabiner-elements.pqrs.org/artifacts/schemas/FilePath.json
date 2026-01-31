@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "FilePath.json",
+  "description": "A file path, typically in POSIX format (e.g., '/Users/username/Documents/file.txt').",
+  "type": "string",
+  "title": "File Path",
+  "pattern": "^(/[^/ ]*)+/?$"
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "EventChangedUnless.json",
+  "title": "Event Changed Unless",
+  "description": "Defines a condition that checks if the event has not changed.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "event_changed_unless"
+    },
+    "value": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the condition."
+    }
+  },
+  "required": [
+    "type",
+    "value"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ConsumerKeyCodes.json",
+  "title": "Consumer Key Codes",
+  "description": "All consumer key codes",
+  "type": "string",
+  "anyOf": [
+    {
+      "$ref": "GlobalConsumerKeyCodes.json"
+    },
+    {
+      "$ref": "FromOnlyConsumerKeyCodes.json"
+    },
+    {
+      "$ref": "ToConsumerKeyCodes.json"
+    }
+  ]
+}

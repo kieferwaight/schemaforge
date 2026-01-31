@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Parameters.json",
+  "title": "Parameters",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "basic.simultaneous_threshold_milliseconds": {
+      "description": "Threshold time in milliseconds for simultaneous key events.",
+      "$ref": "Milliseconds.json"
+    },
+    "basic.to_if_alone_timeout_milliseconds": {
+      "description": "Timeout time in milliseconds for to_if_alone.",
+      "$ref": "Milliseconds.json"
+    },
+    "basic.to_if_held_down_threshold_milliseconds": {
+      "description": "Threshold time in milliseconds for to_if_held_down.",
+      "$ref": "Milliseconds.json"
+    }
+  }
+}

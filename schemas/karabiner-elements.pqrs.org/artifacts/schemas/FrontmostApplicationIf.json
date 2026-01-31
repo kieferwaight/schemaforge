@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "FrontmostApplicationIf.json",
+  "type": "object",
+  "required": [
+    "type",
+    "bundle_identifiers"
+  ],
+  "properties": {
+    "type": {
+      "const": "frontmost_application_if"
+    },
+    "bundle_identifiers": {
+      "type": "array",
+      "items": {
+        "$ref": "BundleIdentifier.json"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

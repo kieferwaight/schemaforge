@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "KeyboardType.json",
+  "title": "Keyboard Type",
+  "description": "The type of keyboard layout. This is used to determine the key codes for the keys on the keyboard.",
+  "type": "string",
+  "enum": [
+    "ansi",
+    "iso",
+    "jis"
+  ]
+}

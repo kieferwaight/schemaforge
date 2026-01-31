@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "StickyModifier.json",
+  "title": "Sticky Modifier",
+  "description": "Sticky modifier settings.",
+  "type": "object",
+  "properties": {
+    "left_control": {
+      "$ref": "StickyModifierState.json"
+    },
+    "left_shift": {
+      "$ref": "StickyModifierState.json"
+    },
+    "left_option": {
+      "$ref": "StickyModifierState.json"
+    },
+    "left_command": {
+      "$ref": "StickyModifierState.json"
+    },
+    "right_control": {
+      "$ref": "StickyModifierState.json"
+    },
+    "right_shift": {
+      "$ref": "StickyModifierState.json"
+    },
+    "right_option": {
+      "$ref": "StickyModifierState.json"
+    },
+    "right_command": {
+      "$ref": "StickyModifierState.json"
+    }
+  }
+}

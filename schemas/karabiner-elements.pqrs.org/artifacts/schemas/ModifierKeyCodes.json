@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ModifierKeyCodes.json",
+  "title": "Modifier Key Codes",
+  "description": "Modifier key codes.",
+  "type": "string",
+  "anyOf": [
+    {
+      "$ref": "CapsLockKeyCode.json"
+    },
+    {
+      "$ref": "HyperKeyCodes.json"
+    },
+    {
+      "$ref": "StickyModifierKeyCodes.json"
+    },
+    {
+      "$ref": "AnyKeyCode.json"
+    }
+  ]
+}

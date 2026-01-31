@@ -1,0 +1,11 @@
+{
+  "$schema": "../namespace/schema.json",
+  "name": "turbo.build",
+  "description": "Turbo.build configuration schemas",
+  "version": "1.0.0",
+  "sync": {
+    "schema.json": "https://turborepo.dev/schema.json",
+    "schema.v1.json": "https://turborepo.dev/schema.v1.json",
+    "schema.v2.json": "https://turborepo.dev/schema.v2.json"
+  }
+}

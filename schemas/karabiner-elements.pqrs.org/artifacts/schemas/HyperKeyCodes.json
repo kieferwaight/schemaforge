@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "HyperKeyCodes.json",
+  "title": "Hyper Key Codes",
+  "description": "Hyper key codes.",
+  "type": "string",
+  "enum": [
+    "control",
+    "shift",
+    "option",
+    "command"
+  ]
+}

@@ -1,0 +1,28 @@
+#!/bin/bash
+# Post-merge hook: Rebuild schemas if they changed
+set -e
+
+echo "🔄 Post-merge hook: Checking for schema updates..."
+
+# Run from repo root
+REPO_ROOT=$(git rev-parse --show-toplevel)
+cd "$REPO_ROOT"
+
+# Check if package.json or pnpm-lock.yaml changed
+# shellcheck disable=SC1083
+if git diff --name-only HEAD@{1} HEAD | grep -qE '^package\.json|^pnpm-lock\.yaml'; then
+	echo "📦 Dependencies changed, reinstalling..."
+	pnpm install
+fi
+
+# Check if any namespace files were updated
+# shellcheck disable=SC1083
+if git diff --name-only HEAD@{1} HEAD | grep -qE '^schemas/.*namespace\.json|^package\.json|^scripts/'; then
+	echo "📦 Schema configuration changed, rebuilding..."
+	pnpm run build || {
+		echo "⚠️  Build had issues, but allowing merge to complete"
+	}
+	echo "✅ Rebuild completed"
+else
+	echo "✓ No schema configuration changes detected"
+fi

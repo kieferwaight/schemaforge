@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "PercentageCoordinates.json",
+  "title": "Screen Percentage Position",
+  "description": "Relative x,y coordinate measured in percentage for positioning on the screen.",
+  "type": "object",
+  "properties": {
+    "x": {
+      "$ref": "Percentage.json",
+      "description": "Horizontal (X-axis) percentage position (e.g., '50%')"
+    },
+    "y": {
+      "$ref": "Percentage.json",
+      "description": "Vertical (Y-axis) percentage position (e.g., '50%')"
+    },
+    "screen": {
+      "$ref": "Index.json"
+    }
+  },
+  "required": [
+    "x",
+    "y"
+  ]
+}

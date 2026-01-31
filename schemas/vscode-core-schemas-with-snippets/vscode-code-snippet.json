@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CodeSnippets",
+  "description": "VSCode Snippets",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "$ref": "#/definitions/CustomSchema"
+    }
+  },
+  "additionalProperties": {
+    "defaultSnippets": [
+      {
+        "label": "Empty Snip",
+        "body": {
+          "scope": "$1",
+          "prefix": "$2",
+          "body": "$3",
+          "description": "$4"
+        }
+      }
+    ],
+    "markdownDescription": "The snippet label",
+    "$ref": "#/definitions/Snippet"
+  },
+  "definitions": {
+    "Snippet": {
+      "type": "object",
+      "description": "User snippet configuration",
+      "additionalProperties": false,
+      "properties": {
+        "prefix": {
+          "markdownDescription": "The prefix to use when selecting the snippet in intellisense.\n\n[See the documentation](https://code.visualstudio.com/docs/editing/userdefinedsnippets)",
+          "type": ["string", "array"]
+        },
+        "isFileTemplate": {
+          "markdownDescription": "The snippet is meant to populate or replace a whole file",
+          "type": "boolean"
+        },
+        "body": {
+          "markdownDescription": "The snippet content. Use `$1`, `${1:defaultText}` to define cursor positions, use `$0` for the final cursor position. Insert variable values with `${varName}` and `${varName:defaultText}`, e.g. `This is file: $TM_FILENAME`.\n\n[See the documentation](https://code.visualstudio.com/docs/editing/userdefinedsnippets)",
+          "type": ["string", "array"],
+          "items": {
+            "type": "string"
+          }
+        },
+        "description": {
+          "markdownDescription": "The snippet description.\n\n[See the documentation](https://code.visualstudio.com/docs/editing/userdefinedsnippets)",
+          "type": ["string", "array"]
+        },
+        "scope": {
+          "markdownDescription": "A list of language names to which this snippet applies, e.g. 'typescript,javascript'.\n\n[See the documentation](https://code.visualstudio.com/docs/editing/userdefinedsnippets)",
+          "type": "string"
+        }
+      }
+    },
+    "CustomSchema": {
+      "description": "Define Custom Schema",
+      "type": "string",
+      "default": "vscode://schemas/global-snippets",
+      "defaultSnippets": [
+        {
+          "label": "Custom Schema",
+          "body": "https://raw.githubusercontent.com/kieferwaight/schemaforge/main/schemas/vscode-core-schemas/schema.json#/properties/globalSnippets"
+        },
+        {
+          "label": "Built In VSCode Schema",
+          "body": "vscode://schemas/global-snippets"
+        }
+      ]
+    }
+  }
+}

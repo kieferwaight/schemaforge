@@ -1,0 +1,75 @@
+{
+  "$schema": "../complex-modification.json",
+  "title": "Example Complex Modification File (~/.config/karabiner/assets/complex_modifications)",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "consumer_key_code": "al_terminal_lock_or_screensaver"
+      },
+      "to": [
+        {
+          "key_code": "power"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "caps_lock",
+        "modifiers": {
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "left_control"
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "escape"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "spacebar",
+        "modifiers": {
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "set_variable": {
+            "name": "hyper_mode",
+            "value": 1
+          }
+        }
+      ],
+      "to_after_key_up": [
+        {
+          "set_variable": {
+            "name": "hyper_mode",
+            "value": 0
+          }
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "spacebar"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "frontmost_application_unless",
+          "bundle_identifiers": [
+            "^com\\.apple\\.Terminal$",
+            "^com\\.microsoft\\.VSCode$"
+          ]
+        }
+      ]
+    }
+  ]
+}

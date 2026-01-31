@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ComplexModifications.json",
+  "title": "Complex Modifications",
+  "description": "Complex modifications configuration for Karabiner-Elements.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "title": "Title",
+      "description": "Title for the list of rules/complex modifications.",
+      "type": "string"
+    },
+    "parameters": {
+      "$ref": "Parameters.json"
+    },
+    "rules": {
+      "title": "Rules",
+      "description": "A list of rules for complex modifications.",
+      "type": "array",
+      "items": {
+        "$ref": "Rule.json"
+      }
+    }
+  }
+}

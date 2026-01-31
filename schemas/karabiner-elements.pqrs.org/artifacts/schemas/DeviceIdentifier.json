@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "DeviceIdentifier.json",
+  "title": "Device Identifier",
+  "description": "Defines a device identifier for matching.",
+  "type": "object",
+  "properties": {
+    "vendor_id": {
+      "description": "Vendor ID of the device.",
+      "type": "integer"
+    },
+    "product_id": {
+      "description": "Product ID of the device.",
+      "type": "integer"
+    },
+    "device_address": {
+      "description": "Bluetooth address (Bluetooth MAC address) of the device.",
+      "type": "string",
+      "pattern": "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$"
+    },
+    "location_id": {
+      "description": "Location ID of the device.",
+      "type": "integer"
+    },
+    "is_keyboard": {
+      "description": "True if the device is a keyboard.",
+      "type": "boolean"
+    },
+    "is_pointing_device": {
+      "description": "True if the device is a pointing device.",
+      "type": "boolean"
+    },
+    "is_game_pad": {
+      "description": "True if the device is a game pad.",
+      "type": "boolean"
+    },
+    "is_consumer": {
+      "description": "True if the device is a consumer device.",
+      "type": "boolean"
+    },
+    "is_touch_bar": {
+      "description": "True if the device is a touch bar.",
+      "type": "boolean"
+    },
+    "is_built_in_keyboard": {
+      "description": "True if the device is a built-in keyboard.",
+      "type": "boolean"
+    }
+  },
+  "minProperties": 1,
+  "additionalProperties": false
+}

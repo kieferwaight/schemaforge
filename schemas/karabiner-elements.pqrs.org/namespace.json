@@ -1,0 +1,17 @@
+{
+  "$schema": "../namespace/schema.json",
+  "name": "karabiner-elements.pqrs.org",
+  "description": "Karabiner-Elements configuration schemas",
+  "version": "1.0.0",
+  "tests": [
+    "test/karabiner-config.json",
+    "test/complex-modification-config.json"
+  ],
+  "scripts": {
+    "build": "pnpm run build:bundle && pnpm run build:types",
+    "build:bundle": "pnpm run build:karabiner && pnpm run build:complex",
+    "build:karabiner": "../../scripts/schema/bundle.js ./artifacts/schemas/Karabiner.json ./karabiner.json",
+    "build:complex": "../../scripts/schema/bundle.js ./artifacts/schemas/ComplexModification.json ./complex-modification.json",
+    "build:types": "../../scripts/type/generate.js"
+  }
+}

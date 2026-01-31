@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Rule.json",
+  "title": "Rule",
+  "description": "A rule for complex modifications.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "$ref": "Schema.json"
+    },
+    "description": {
+      "title": "Description",
+      "description": "This description is shown in settings.",
+      "type": "string"
+    },
+    "manipulators": {
+      "title": "Manipulators",
+      "description": "A list of manipulators that define the rules.",
+      "type": "array",
+      "items": {
+        "$ref": "Manipulator.json"
+      }
+    }
+  }
+}

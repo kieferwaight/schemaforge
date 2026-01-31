@@ -1,0 +1,6 @@
+{
+  "$schema": "../namespace/schema.json",
+  "name": "vscode-core-schemas-with-snippets",
+  "description": "VS Code core schemas with snippets",
+  "version": "1.0.0"
+}

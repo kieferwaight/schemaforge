@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Custom VSCode Settings Schema",
+  "type": "object",
+  "properties": {
+    "markdown.preview.typographer": {
+      "type": "boolean",
+      "description": "## Markdown Preview Typographer\n\nWhen enabled, it improves typography in Markdown preview by converting straight quotes into curly quotes, double hyphens into en dashes, and triple hyphens into em dashes."
+    }
+  }
+}

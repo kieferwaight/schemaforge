@@ -1,0 +1,42 @@
+#!/bin/bash
+# Pre-commit hook: Build schemas, run tests, and update README
+
+echo "🔨 Pre-commit hook: Building and syncing schemas..."
+
+# Run from repo root
+REPO_ROOT=$(git rev-parse --show-toplevel)
+# shellcheck disable=SC2164
+cd "$REPO_ROOT"
+
+# Build all namespaces
+echo "📦 Building all namespaces..."
+if ! pnpm run build; then
+	echo ""
+	echo "⚠️  Build warning: Some namespaces failed to build."
+	echo "   This may be due to missing dependencies or configuration issues."
+	echo "   You can still commit, but schemas may be out of date."
+	echo "   Fix issues and rebuild with: pnpm run build"
+	echo ""
+fi
+
+# Run tests
+echo "🧪 Running tests..."
+if ! pnpm run test; then
+	echo "❌ Tests failed - aborting commit"
+	echo "   Fix test failures and try again."
+	exit 1
+fi
+
+# Update README with current namespaces
+echo "📝 Updating README..."
+if ! pnpm run readme:update; then
+	echo "❌ Failed to update README - aborting commit"
+	exit 1
+fi
+
+# Stage any changes to schemas and README
+echo "📋 Staging changes..."
+git add -A -- schemas/
+git add README.md
+
+echo "✅ Pre-commit hook completed successfully"

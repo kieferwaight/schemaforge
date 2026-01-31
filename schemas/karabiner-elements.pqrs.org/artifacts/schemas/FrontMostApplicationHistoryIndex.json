@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "FrontMostApplicationHistoryIndex.json",
+  "title": "Front Most Application History Index",
+  "description": "A non-negative integer representing the index of the frontmost application in the history (0 = most recent, 1 = second most recent, etc.)",
+  "$ref": "HistoryIndex.json"
+}

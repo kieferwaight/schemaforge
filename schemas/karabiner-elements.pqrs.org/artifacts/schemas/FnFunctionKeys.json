@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "FnFunctionKeys.json",
+  "title": "Fn Function Keys",
+  "description": "Function keys that can be used with the Fn key.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "from": {
+        "type": "object",
+        "properties": {
+          "key_code": {
+            "$ref": "FunctionKeyCodes.json"
+          }
+        },
+        "required": ["key_code"],
+        "additionalProperties": false
+      },
+      "to": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "key_code": {
+              "$ref": "ToKeyCodes.json"
+            },
+            "consumer_key_code": {
+              "$ref": "ToConsumerKeyCodes.json"
+            },
+            "pointing_button": {
+              "$ref": "PointingButton.json"
+            },
+            "apple_vendor_keyboard_code": {
+              "$ref": "AppleVendorKeyCodes.json"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": ["from", "to"]
+  }
+}

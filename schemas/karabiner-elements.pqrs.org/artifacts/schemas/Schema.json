@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Schema.json",
+  "title": "Schema",
+  "description": "Define a custom schema",
+  "type": "string",
+  "default": "https://raw.githubusercontent.com/kieferwaight/schemaforge/main/schemas/karabiner-elements.pqrs.org/artifacts/schemas/Karabiner.json"
+}

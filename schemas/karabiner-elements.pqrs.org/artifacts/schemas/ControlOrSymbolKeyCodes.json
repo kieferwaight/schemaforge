@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ControlOrSymbolKeyCodes.json",
+  "title": "Control or Symbol Key Codes",
+  "description": "Control or symbol key codes.",
+  "type": "string",
+  "enum": [
+    "return_or_enter",
+    "escape",
+    "delete_or_backspace",
+    "delete_forward",
+    "tab",
+    "spacebar",
+    "hyphen",
+    "equal_sign",
+    "open_bracket",
+    "close_bracket",
+    "backslash",
+    "non_us_pound",
+    "semicolon",
+    "quote",
+    "grave_accent_and_tilde",
+    "comma",
+    "period",
+    "slash",
+    "non_us_backslash"
+  ]
+}

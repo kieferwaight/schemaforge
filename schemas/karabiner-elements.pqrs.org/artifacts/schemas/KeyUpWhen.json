@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "KeyUpWhen.json",
+  "title": "Key Up When",
+  "description": "When key_up events are posted. any: Post key_up events when any key is released. all: Post key_up events when all keys are released.",
+  "type": "string",
+  "enum": [
+    "any",
+    "all"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "AnyKeyCode.json",
+  "title": "Any Key Code",
+  "description": "Represents any key code as accepted by Karabiner-Elements, including generic keys and modifier keys.",
+  "const": "any"
+}

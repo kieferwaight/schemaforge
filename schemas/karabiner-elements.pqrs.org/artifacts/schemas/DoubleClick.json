@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "DoubleClick.json",
+  "title": "Double Click",
+  "description": "Send double click event by software. cg_event_double_click ensures that the click event occurs at the same location even if the mouse cursor is moving between the first click and the second click. See: https://karabiner-elements.pqrs.org/docs/json/complex-modifications-manipulator-definition/to/software_function/cg_event_double_click/",
+  "type": "object",
+  "properties": {
+    "button": {
+      "$ref": "CGButton.json"
+    }
+  },
+  "required": [
+    "button"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Karabiner.json",
+  "title": "Karabiner",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "$ref": "Schema.json"
+    },
+    "global": {
+      "$ref": "Global.json"
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "$ref": "Profile.json"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "profiles"
+  ]
+}

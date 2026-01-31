@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "InputSourceIf.json",
+  "title": "Input Source If",
+  "description": "Defines a condition that checks if the input source matches a specific value.",
+  "type": "object",
+  "required": [
+    "type",
+    "input_sources"
+  ],
+  "properties": {
+    "type": {
+      "const": "input_source_if"
+    },
+    "input_sources": {
+      "type": "array",
+      "items": {
+        "$ref": "InputSource.json"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

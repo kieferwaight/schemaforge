@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Global.json",
+  "title": "Global Settings",
+  "description": "Global settings outside of profiles.",
+  "type": "object",
+  "properties": {
+    "check_for_updates_on_startup": {
+      "type": "boolean",
+      "description": "Check for updates on startup",
+      "default": false
+    },
+    "show_in_menu_bar": {
+      "type": "boolean",
+      "description": "Show Karabiner-Elements in the menu bar",
+      "default": false
+    },
+    "show_profile_name_in_menu_bar": {
+      "type": "boolean",
+      "description": "Show the profile name in the menu bar",
+      "default": false
+    },
+    "show_additional_menu_items": {
+      "type": "boolean",
+      "description": "Show additional menu items",
+      "default": false
+    }
+  },
+  "additionalProperties": false
+}

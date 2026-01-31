@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "AppleVendorKeyCodes.json",
+  "title": "Apple Vendor Key Codes",
+  "description": "Apple vendor key codes.",
+  "type": "string",
+  "enum": [
+    "mission_control",
+    "launchpad"
+  ]
+}

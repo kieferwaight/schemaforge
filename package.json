@@ -1,0 +1,25 @@
+{
+  "name": "schemaforge",
+  "version": "1.0.0",
+  "description": "JSON schema repository with TypeScript type generation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "pnpm install",
+    "setup:hooks": "scripts/setup/hooks.js",
+    "build": "./scripts/build.sh && pnpm -r run build",
+    "test": "./scripts/test.sh && pnpm -r run test",
+    "clean": "./scripts/clean.sh && pnpm -r run clean",
+    "namespace:create": "./scripts/namespace/create.js",
+    "namespace:list": "./scripts/namespace/list.js",
+    "readme:update": "./scripts/readme/update.js"
+  },
+  "dependencies": {
+    "@apidevtools/json-schema-ref-parser": "^11.7.2",
+    "ajv": "^8.17.1"
+  },
+  "devDependencies": {
+    "json-schema-to-typescript": "^15.0.3"
+  },
+  "packageManager": "pnpm@9.15.4"
+}

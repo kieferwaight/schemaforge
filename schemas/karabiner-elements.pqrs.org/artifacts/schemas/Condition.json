@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Condition.json",
+  "title": "Karabiner Condition",
+  "description": "Defines a condition that can be used to control when a rule applies.",
+  "type": "object",
+  "anyOf": [
+    {
+      "$ref": "VariableIf.json"
+    },
+    {
+      "$ref": "VariableUnless.json"
+    },
+    {
+      "$ref": "InputSourceIf.json"
+    },
+    {
+      "$ref": "InputSourceUnless.json"
+    },
+    {
+      "$ref": "FrontmostApplicationIf.json"
+    },
+    {
+      "$ref": "FrontmostApplicationUnless.json"
+    },
+    {
+      "$ref": "KeyboardTypeIf.json"
+    },
+    {
+      "$ref": "KeyboardTypeUnless.json"
+    },
+    {
+      "$ref": "EventChangedIf.json"
+    },
+    {
+      "$ref": "EventChangedUnless.json"
+    },
+    {
+      "$ref": "DeviceExistsIf.json"
+    },
+    {
+      "$ref": "DeviceExistsUnless.json"
+    },
+    {
+      "$ref": "DeviceIf.json"
+    },
+    {
+      "$ref": "DeviceUnless.json"
+    },
+    {
+      "$ref": "DeviceIf.json"
+    },
+    {
+      "$ref": "DeviceUnless.json"
+    }
+  ]
+}

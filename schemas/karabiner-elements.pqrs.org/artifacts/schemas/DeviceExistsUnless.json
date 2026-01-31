@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "DeviceExistsUnless.json",
+  "title": "Device Exists Unless",
+  "description": "Defines a condition that checks if a device is not connected.",
+  "type": "object",
+  "required": [
+    "type",
+    "identifiers"
+  ],
+  "properties": {
+    "type": {
+      "description": "Valid unless a specified device is connected",
+      "const": "device_exists_unless"
+    },
+    "identifiers": {
+      "type": "array",
+      "items": {
+        "$ref": "DeviceIdentifier.json"
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

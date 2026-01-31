@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "SetNotificationMessage.json",
+  "title": "Set Notification Message",
+  "description": "Sets or remove the notification message.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "ID",
+      "description": "A unique identifier for the notification message.",
+      "type": "string"
+    },
+    "text": {
+      "title": "Text",
+      "description": "The text of the notification message. Set to empty string to remove the message.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "text"
+  ]
+}

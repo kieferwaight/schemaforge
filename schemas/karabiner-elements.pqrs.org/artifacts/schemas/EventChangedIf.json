@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "EventChangedIf.json",
+  "title": "Event Changed If",
+  "description": "Defines a condition that checks if the event has changed.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "event_changed_if"
+    },
+    "value": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the condition."
+    }
+  },
+  "required": [
+    "type",
+    "value"
+  ],
+  "additionalProperties": false
+}

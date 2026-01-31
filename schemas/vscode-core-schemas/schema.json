@@ -1,0 +1,42 @@
+{
+	"$schema": "http://json-schema.org/draft/2020-12/schema",
+	"$id": "http://example.com/root-schema.json",
+	"title": "VSCode Root Schema",
+	"type": "object",
+	"properties": {
+		"argv": { "$ref": "./schemas/argv.json" },
+		"colorTheme": { "$ref": "./schemas/color-theme.json" },
+		"extensions": { "$ref": "./schemas/extensions.json" },
+		"globalSnippets": { "$ref": "./schemas/global-snippets.json" },
+		"iconTheme": { "$ref": "./schemas/icon-theme.json" },
+		"icons": { "$ref": "./schemas/icons.json" },
+		"ignoredSettings": { "$ref": "./schemas/ignoredSettings.json" },
+		"keybindings": { "$ref": "./schemas/keybindings.json" },
+		"languageConfiguration": {
+			"$ref": "./schemas/language-configuration.json"
+		},
+		"launch": { "$ref": "./schemas/launch.json" },
+		"productIconTheme": { "$ref": "./schemas/product-icon-theme.json" },
+		"settings": {
+			"type": "object",
+			"properties": {
+				"default": { "$ref": "./schemas/settings/default.json" },
+				"folder": { "$ref": "./schemas/settings/folder.json" },
+				"machine": { "$ref": "./schemas/settings/machine.json" },
+				"resourceLanguage": {
+					"$ref": "./schemas/settings/resourceLanguage.json"
+				},
+				"user": { "$ref": "./schemas/settings/user.json" },
+				"workspace": { "$ref": "./schemas/settings/workspace.json" }
+			}
+		},
+		"snippets": { "$ref": "./schemas/snippets.json" },
+		"tasks": { "$ref": "./schemas/tasks.json" },
+		"textmateColors": { "$ref": "./schemas/textmate-colors.json" },
+		"tokenStyling": { "$ref": "./schemas/token-styling.json" },
+		"vscodeExtensions": { "$ref": "./schemas/vscode-extensions.json" },
+		"workbenchColors": { "$ref": "./schemas/workbench-colors.json" },
+		"workspaceConfig": { "$ref": "./schemas/workspaceConfig.json" }
+	},
+	"additionalProperties": false
+}

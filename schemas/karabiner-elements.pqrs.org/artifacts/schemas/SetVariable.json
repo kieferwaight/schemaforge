@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "SetVariable.json",
+  "title": "Set Variable",
+  "description": "Defines and updates the variable value.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "title": "Name",
+      "description": "Target variable name.",
+      "type": "string"
+    },
+    "value": {
+      "title": "Value",
+      "description": "Target variable value.",
+      "$ref": "VariableValues.json"
+    },
+    "key_up_value": {
+      "title": "Key Up Value",
+      "description": "A variable value when key is up.",
+      "$ref": "VariableValues.json"
+    },
+    "type": {
+      "title": "Type",
+      "description": "The type of variable operation.",
+      "type": "string",
+      "enum": [
+        "set",
+        "unset"
+      ]
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

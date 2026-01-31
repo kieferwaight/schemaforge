@@ -1,0 +1,9 @@
+{
+  "$schema": "../namespace/schema.json",
+  "name": "tsconfig",
+  "description": "TypeScript configuration schema",
+  "version": "1.0.0",
+  "sync": {
+    "schema.json": "https://www.schemastore.org/tsconfig.json"
+  }
+}

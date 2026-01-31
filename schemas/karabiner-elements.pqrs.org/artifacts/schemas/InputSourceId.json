@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "InputSourceId.json",
+  "title": "Input Source ID",
+  "description": "The input source ID regex such as '^com\\.apple\\.keylayout\\.US$'",
+  "type": "string",
+  "pattern": "^com\\.[a-zA-Z0-9_\\-]+\\.[a-zA-Z0-9_\\-]+$"
+}

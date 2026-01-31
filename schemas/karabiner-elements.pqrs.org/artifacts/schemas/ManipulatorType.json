@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ManipulatorType.json",
+  "title": "Manipulator Type",
+  "description": "The type of manipulator.",
+  "default": "basic",
+  "type": "string",
+  "enum": [
+    "basic",
+    "mouse_motion_to_scroll"
+  ]
+}

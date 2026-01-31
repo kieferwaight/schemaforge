@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "VariableUnless.json",
+  "title": "Variable Unless",
+  "description": "Defines a condition that checks if a variable is not set to a specific value.",
+  "type": "object",
+  "required": [
+    "type",
+    "name",
+    "value"
+  ],
+  "properties": {
+    "type": {
+      "const": "variable_unless"
+    },
+    "name": {
+      "type": "string"
+    },
+    "value": {
+      "$ref": "VariableValues.json"
+    }
+  },
+  "additionalProperties": false
+}

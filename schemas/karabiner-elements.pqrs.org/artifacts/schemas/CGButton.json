@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "CGButton.json",
+  "title": "CG Button",
+  "description": "An integer of CGMouseButton. (0: Left Click, 1: Right Click, 2: Middle Click, 3-31: Other Buttons)",
+  "type": "integer",
+  "maximum": 31,
+  "minimum": 0
+}

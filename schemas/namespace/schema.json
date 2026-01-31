@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "../schemaforge-tools/namespace.schema.json",
+  "title": "Schema Namespace Manifest",
+  "description": "Schema for namespace.json files in the schema build system",
+  "type": "object",
+  "required": ["name", "description", "version"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Schema URL"
+    },
+    "name": {
+      "type": "string",
+      "description": "Unique namespace identifier",
+      "pattern": "^[a-z0-9][a-z0-9.-]*$",
+      "examples": ["tsconfig", "turbo.build", "npm.package"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of the namespace",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the namespace configuration",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "default": "1.0.0"
+    },
+    "tests": {
+      "type": "array",
+      "description": "List of test files to validate against the schemas in this namespace",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "sync": {
+      "type": "object",
+      "description": "Schema files to download from URLs. Keys are relative file paths, values are URLs.",
+      "patternProperties": {
+        "^.+\\.json$": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to download the schema from"
+        }
+      },
+      "additionalProperties": false,
+      "examples": [
+        {
+          "schema.json": "https://example.com/schema.json",
+          "types/another.json": "https://example.com/another.json"
+        }
+      ]
+    },
+    "scripts": {
+      "type": "object",
+      "description": "Custom npm scripts for build, test, or other actions. These will be added to the generated package.json.",
+      "patternProperties": {
+        "^[a-z][a-z0-9:_-]*$": {
+          "type": "string",
+          "description": "Script command to execute"
+        }
+      },
+      "additionalProperties": false,
+      "examples": [
+        {
+          "build:bundle": "node ../../scripts/bundle-schemas.js input.json output.json",
+          "build:types": "node ../../scripts/generate-types.js",
+          "prebuild": "echo 'Starting build...'"
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

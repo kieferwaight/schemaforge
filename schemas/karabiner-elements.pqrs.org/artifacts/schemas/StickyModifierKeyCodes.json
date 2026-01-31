@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "StickyModifierKeyCodes.json",
+  "title": "Sticky Modifier Key Codes",
+  "description": "Sticky modifier key codes.",
+  "type": "string",
+  "enum": [
+    "left_control",
+    "left_shift",
+    "left_option",
+    "left_command",
+    "right_control",
+    "right_shift",
+    "right_option",
+    "right_command",
+    "fn"
+  ]
+}

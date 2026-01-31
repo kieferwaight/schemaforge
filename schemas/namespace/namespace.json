@@ -1,0 +1,6 @@
+{
+  "$schema": "../namespace/schema.json",
+  "name": "namespace",
+  "description": "Internal tooling schemas for the schema build system",
+  "version": "1.0.0"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "PcKeyboardCodes.json",
+  "title": "PC Keyboard Codes",
+  "description": "PC keyboard codes.",
+  "type": "string",
+  "enum": [
+    "print_screen",
+    "scroll_lock",
+    "pause",
+    "insert",
+    "application",
+    "help",
+    "power"
+  ]
+}
