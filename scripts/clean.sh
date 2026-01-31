@@ -17,9 +17,12 @@ find ./schemas -maxdepth 2 -type d -name "node_modules" -exec rm -rf {} + 2>/dev
 rm -rf node_modules
 echo "✅ Cleaned node_modules"
 
+echo "🧹 Removing generated package.json files..."
+find ./schemas -maxdepth 2 -name "package.json" ! -path "*/node_modules/*" -delete
+echo "✅ Removed generated package.json files"
+
 if [[ -n "$FORCE_FLAG" ]]; then
-	echo "🧹 Removing generated files..."
-	find ./schemas -maxdepth 2 -name "package.json" ! -path "*/node_modules/*" -delete
+	echo "🧹 Removing lockfile..."
 	rm -f pnpm-lock.yaml
-	echo "✅ Removed generated files"
+	echo "✅ Removed lockfile"
 fi
