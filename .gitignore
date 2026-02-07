@@ -13,3 +13,4 @@ schemas/**/package.json
 schemas/**/package-lock.json
 schemas/**/yarn.lock
 schemas/**/pnpm-lock.yaml
+.turbo
